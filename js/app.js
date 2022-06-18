@@ -107,7 +107,6 @@ const app = {
 			}
 		`;
 		}
-		
 	},
 	isOpened(start, end) {
 		start >= end ?
