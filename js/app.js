@@ -79,40 +79,61 @@ const app = {
 			item7: "Բրաունի"
 		}
 	],
-	callCenter(address, telNumber, isDelivery, isOpen, type){
-		return `
+	callCenter(){
+		if (!app.restaurantDetails[7].isOpen) {
+			return "Մենք փակ ենք, խնդրում ենք զանգել վաղը";
+		} else {
+			return `
 			Բարև Ձեզ, Ձեզ սպասարկում է ${app.restaurantStaff[13].customer}ը
 			${
-				address = app.restaurantDetails[0].address !== undefined ?
+				app.restaurantDetails[0].address !== undefined ?
 				"Մեր հասցեն է " + app.restaurantDetails[0].address :
 				"Կներեք, մենք հասցե չունենք"
 			}
 			${
-				telNumber = app.restaurantDetails[1].telNumber !== undefined ?
+				app.restaurantDetails[1].telNumber !== undefined ?
 				"Մեր հեռախոսահամարն է " + app.restaurantDetails[1].telNumber :
 				"Կներեք, մենք չունենք հեռախոսահամար"
 			}
 			${
-				isDelivery = app.restaurantDetails[6].isDelivery === true ?
+				app.restaurantDetails[6].isDelivery === true ?
 				"Այո, կարող ենք իրականացնել Ձեր պատվերը" :
 				"Կներեք, բայց մեր առաքիչը զբաղված է, պետք է դուք մոտենաք"
 			}
 			${
-				isDelivery = app.restaurantDetails[7].isOpen === true ?
+				app.restaurantDetails[7].isOpen === true ?
 				"Այո, ներկա պահին բաց ենք" :
 				"Ոչ, կներեք մենք փակ ենք"
 			}
 		`;
+		}
+		
 	},
 	isOpened(start, end) {
 		start >= end ?
 		app.restaurantDetails[7].isOpen = false :
 		app.restaurantDetails[7].isOpen = true;
+	},
+
+	favoriteCook(cook) {
+		if (!app.restaurantDetails[7].isOpen) {
+			return "Մենք փակ ենք, խնդրում ենք զանգել վաղը";
+		} else {
+			if (cook === "Արտակ Ադամյան") {
+				return "Մենք պատվեր կանենք";
+			} else if (cook === "Կարինե Տոնոյան") {
+				return "Ես պատվեր չեմ անի";
+			} else {
+				return "Խոհարարը աշխատանքի չի եկել";
+			}
+		}
 	}
 };
 
-app.isOpened(9, 24);
+app.isOpened(24, 24);
 
 const client = app.callCenter();
+const anotherClient = app.favoriteCook(app.restaurantStaff[9].cook);
 
 console.log(client);
+console.log(anotherClient);
