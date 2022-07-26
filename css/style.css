@@ -19,33 +19,31 @@ button:hover {
 	background: lime;
 	color: #000;
 }
-.flag_wrapper {
+#flags {
 	margin: 60px 0px;
 }
-.flag_wrapper > .flag {
+#flags > .flag {
 	width: 250px;
 	height: 48px;
 }
-.flag_wrapper > .flag:nth-child(1) {
+#flags > .flag:nth-child(1) {
 	background: #f00;
 }
-.flag_wrapper > .flag:nth-child(2) {
+#flags > .flag:nth-child(2) {
 	background: #00f;
 }
-.flag_wrapper > .flag:nth-child(3) {
+#flags > .flag:nth-child(3) {
 	background: #ff8800;
 }
-.wrapper {
+#wrapper {
 	margin-top: 40px;
 	display: flex;
 	gap: 10px;
 }
-.wrapper > .box {
+#wrapper > .box {
 	width: 150px;
 	height: 150px;
 	background: #666aaa;
-	animation: bangladesh 0.2s ease-in-out;
-	border-radius: 50%;;
 }
 p {
 	font-size: 18px;
@@ -56,15 +54,4 @@ p {
 p::selection {
 	background: lime;
 	color: #000
-}
-@keyframes bangladesh {
-	from {
-		transform: rotate(0deg);
-		background: linear-gradient(red, blue);
-	}
-
-	to {
-		transform: rotate(360deg);
-		background: linear-gradient(blue, red);
-	}
 }
