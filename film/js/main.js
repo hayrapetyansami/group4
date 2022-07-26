@@ -32,12 +32,3 @@ _DB.movies.forEach((film, index) => {
 		</p>
 	`;
 });
-
-const input = document.querySelector("#add input");
-const mainPromo = document.querySelector("#main_promo");
-const h1 = document.createElement("h1");
-mainPromo.append(h1)
-
-input.addEventListener("input", (e) => {
-	h1.innerHTML = e.target.value
-});
