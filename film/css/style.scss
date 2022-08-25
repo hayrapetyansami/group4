@@ -233,3 +233,57 @@ main {
 		}
 	}
 }
+
+// modal
+
+.modal_wrapper {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+
+	&.modal_wrapper-active {
+		display: flex;
+	}
+	form {
+		padding: 30px;
+		background: #fff;
+		border-radius: $br;
+
+		h2 {
+			margin-bottom: 15px;
+			color: #555;
+			letter-spacing: 2px;
+		}
+
+		input {
+			display: block;
+			width: 100%;
+			min-width: 280px;
+			margin-bottom: 5px;
+			padding: 10px 15px;
+			border: 1px solid #ccc;
+			border-radius: $br;
+			cursor: pointer;
+		}
+
+		button {
+			display: block;
+			margin-top: 15px;
+			padding: 8px 15px;
+			border: none;
+			cursor: pointer;
+			background: green;
+			color: #fff;
+			font-size: 15px;
+			border-radius: $br;
+		}
+	}
+}

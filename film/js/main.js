@@ -3,7 +3,9 @@
 const poster = document.querySelector("header img");
 const filmsBlock = document.querySelector("#films");
 const form = document.querySelector("#add");
-
+const signInModalBtn = document.querySelector("[data-in]");
+const signInModal = document.querySelector("[data-in-modal]");
+// տնայինի ակտիվ կլասս "modal_wrapper-active"
 const _DB = {
 	movies: [
 		"Logan", "Spider-Man","The Seven Samurai",
@@ -11,7 +13,6 @@ const _DB = {
 		"The Deer Hunter", "Rocky", "Crid"
 	]
 };
-
 function init () {
 	document.querySelectorAll("#main_promo .mp").forEach(adv => adv.remove());
 	poster.src = "img/bg2.jpg";
@@ -23,7 +24,6 @@ function init () {
 	document.title = poster.alt;
 }
 init();
-
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	const val = e.target.firstElementChild.value.trim();
@@ -40,7 +40,6 @@ form.addEventListener("submit", (e) => {
 	createFilmsList(_DB.movies, filmsBlock);
 	e.target.reset();
 });
-
 function setSort (arr) {
 	arr.sort()
 }
@@ -58,7 +57,6 @@ function createFilmsList (films, parent) {
 
 	removeFilmFromList('[data-rm]')
 }
-
 function removeFilmFromList(selector) {
 	setSort(_DB.movies);
 	document.querySelectorAll(selector).forEach((btn, index) => {
@@ -69,5 +67,4 @@ function removeFilmFromList(selector) {
 		});
 	});
 }
-
 createFilmsList(_DB.movies, filmsBlock);
