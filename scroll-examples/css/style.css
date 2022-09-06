@@ -1,0 +1,52 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 300vh;
+}
+
+#text_box {
+	max-width: 600px;
+	margin: 40px auto;
+}
+
+#text_box p {
+	height: 550px;
+	margin-bottom: 40px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#text_box p span {
+	color: #f00;
+} 
+
+#text_box button {
+	display: inline-block;
+	font-style: 30px;
+	background: #22cc22;
+	padding: 8px 25px;
+	margin-right: 20px;
+	color: #1a1a1a;
+	border: 3px solid #111;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 5px;
+	font-family: Arial;
+}
+
+#top {
+	display: none;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: fit-content;
+	font-size: 30px;
+	background: #00c;
+	color: #fff;
+	padding: 10px 15px;
+	cursor: pointer;
+}
