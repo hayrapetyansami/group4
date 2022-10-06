@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	padding: 30px;
+	font-family: Arial;
+}
+
+form {
+	margin-bottom: 40px;
+	user-select: none;
+}
+
+form h2 {
+	color: #5d5d5d;
+	margin-bottom: 12px;
+}
+
+form input {
+	padding: 8px;
+}
+
+form input[type="text"], input[type="password"] {
+	border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+	border: 1px solid #ff2288;
+	background: #ff2288;
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.message {
+	margin-top: 15px;
+	font-size: 17px;
+	font-family: Arial;
+}
