@@ -1,0 +1,28 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "brand": "Xiaomi",
+      "model": "Note 8T",
+      "storage": "128GB",
+      "ram": "4GB",
+      "colors": [
+        "Black",
+        "Gray",
+        "Purple"
+      ]
+    },
+    {
+      "id": 2,
+      "brand": "Google",
+      "model": "Pixel 7",
+      "storage": "516GB",
+      "ram": "12GB",
+      "colors": [
+        "White",
+        "Silver",
+        "Brown"
+      ]
+    }
+  ]
+}
