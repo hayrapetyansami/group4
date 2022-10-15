@@ -1,0 +1,24 @@
+{
+  "todo": [
+    {
+      "title": "Learn JavaScript",
+      "id": 1
+    },
+    {
+      "title": "Learn TypeScript",
+      "id": 2
+    },
+    {
+      "title": "Learn Vue & Remix",
+      "id": 3
+    },
+    {
+      "title": "Learn Angular",
+      "id": 4
+    },
+    {
+      "title": "Learn Python",
+      "id": 5
+    }
+  ]
+}
