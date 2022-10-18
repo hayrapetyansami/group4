@@ -11,7 +11,7 @@ body {
 	background: #ddd;
 }
 
-#root #todo-form {
+#root{
 	padding: 30px;
 	background: #fff;
 	border-radius: 5px;
@@ -19,19 +19,19 @@ body {
 	margin: 0 auto;
 }
 
-#root #todo-form #screenBlock {
+#root #app-form #screenBlock {
 	display: flex;
 	margin-bottom: 24px;
 }
 
-#root #todo-form #screenBlock input {
+#root #app-form #screenBlock input {
 	padding: 10px;
 	border: 1px solid #ccc;
 	width: 100%;
 	border-radius: 5px 0px 0px 5px;
 }
 
-#root #todo-form #screenBlock button {
+#root #app-form #screenBlock #screenBtnAdd {
 	background: #1a90ee;
 	color: #fff;
 	border: none;
@@ -40,28 +40,70 @@ body {
 	border-radius: 0px 5px 5px 0px;
 }
 
-#root #todo-form #listsBlock .listsBlock__item {
+#root #app-form #listsBlock .listsBlock__item {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 16px;
 }
 
-#root #todo-form #listsBlock .listsBlock__item p span {
+#root #app-form #listsBlock .listsBlock__item .listsBlock__item__content span {
 	margin-right: 10px;
-	font-weight: bold;
 }
 
-#root #todo-form #listsBlock .listsBlock__item button {
+#root #app-form #listsBlock .listsBlock__item .listsBlock__item__content input {
+	padding: 7px 9px;
+	border-radius: 5px;
+	border: 1px solid transparent;
+}
+
+#root #app-form #listsBlock .listsBlock__item .listsBlock__item__content input.edit {
+	border-color: #ccc;
+}
+
+#root #app-form #listsBlock .listsBlock__item .buttons button {
 	padding: 8px 12px;
 	cursor: pointer;
 	border: none;
 	border-radius: 5px;
-	background: #f00700;
 	color: #fff;
 	transition: 0.3s;
 }
 
-#root #todo-form #listsBlock .listsBlock__item button:hover {
+#root #app-form #listsBlock .buttons [data-rm] {
+	background: #f00700;
+}
+
+#root #app-form #listsBlock .buttons [data-ed] {
+	background: #ffc000;
+}
+
+#root #app-form #listsBlock .buttons [data-sv] {
+	display: none;
+	background: #d900ff;
+}
+
+#root #app-form #listsBlock .buttons [data-rm]:hover {
 	background: #d00111;
+}
+
+#root #app-form #listsBlock .buttons [data-ed]:hover {
+	background: #efb403;
+}
+
+#root #app-form #listsBlock .buttons [data-sv]:hover {
+	background: #c311e2;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 12px;
+	color: #555;
+	letter-spacing: 1.5px;
+}
+
+p {
+	text-align: center;
+	margin-bottom: 12px;
+	color: #566;
 }
