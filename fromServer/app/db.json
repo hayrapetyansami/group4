@@ -2,28 +2,13 @@
   "todos": [
     {
       "title": "Learn JavaScript",
-      "isComplete": false,
+      "isComplete": true,
       "id": 1
     },
     {
       "title": "Learn TypeScript",
       "isComplete": false,
       "id": 2
-    },
-    {
-      "title": "Learn Async programming",
-      "isComplete": false,
-      "id": 3
-    },
-    {
-      "title": "Learn Async/Await",
-      "isComplete": false,
-      "id": 4
-    },
-    {
-      "title": "Learn Vue, Svelte and Remix",
-      "isComplete": false,
-      "id": 5
     }
   ]
 }
