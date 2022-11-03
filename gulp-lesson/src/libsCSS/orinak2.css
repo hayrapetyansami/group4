@@ -1,0 +1,9 @@
+pre {
+	display: flex;
+	justify-content: space-between;
+	font-size: 25px;
+	color: #41c001;
+	font-family: Verdana;
+	padding: 10px;
+	background: #1a1a1a;
+}
