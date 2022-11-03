@@ -40,7 +40,7 @@ async function preproc () {
 
 // task for the other css files to concat in one css file
 async function libsCSS () {
-	return gulp.src("./src/libsCSS/*.css")
+	return gulp.src("./src/libsCSS/**/*.css")
 		.pipe(gcmq())
 		.pipe(concat("libs-css-file.css"))
 		.pipe(autoPrefixer({
@@ -56,7 +56,7 @@ async function libsCSS () {
 
 // task for all javascript files with babel
 async function scripts () {
-	return gulp.src("./src/js/*.js")
+	return gulp.src("./src/js/**/*.js")
 		.pipe(sourcemaps.init())
 		.pipe(concat("all.js"))
 		.pipe(babel({
@@ -85,19 +85,19 @@ async function toClear () {
 
 // task for fonts
 async function fonts () {
-	return gulp.dest("./src/fonts/*")
+	return gulp.src("./src/fonts/**/*")
 		.pipe(gulp.dest(path+"/fonts"));
 }
 
 // task for other js files (libs)
 async function libsJS () {
-	return gulp.src("./src/libsJS/*.js")
+	return gulp.src("./src/libsJS/**/*.js")
 		.pipe(gulp.dest(path+"/libsJS"))
 		.pipe(browserSync.stream());
 }
 
 async function htmls () {
-	return gulp.src("./src/*.html")
+	return gulp.src("./src/**/*.html")
 		.pipe(htmlmin({
 			collapseWhitespace: true,
 			removeTagWhitespace: true
@@ -116,13 +116,13 @@ async function watch () {
 	});
 
 	gulp.watch("./src/scss/**/*.scss", preproc);
-	gulp.watch("./src/libsCSS/*.css", libsCSS);
-	gulp.watch("./src/js/*.js", scripts);
+	gulp.watch("./src/libsCSS/**/*.css", libsCSS);
+	gulp.watch("./src/js/**/*.js", scripts);
 	gulp.watch("./src/img/**/*", pictures);
-	gulp.watch("./src/fonts/*", fonts);
-	gulp.watch("./src/libsJS/*.js", libsJS);
-	gulp.watch("./src/*.html", htmls);
-	gulp.watch("./*html").on("change", browserSync.reload);
+	gulp.watch("./src/fonts/**/*", fonts);
+	gulp.watch("./src/libsJS/**/*.js", libsJS);
+	gulp.watch("./src/**/*.html", htmls);
+	gulp.watch("./**/*html").on("change", browserSync.reload);
 }
 
 //             run       script

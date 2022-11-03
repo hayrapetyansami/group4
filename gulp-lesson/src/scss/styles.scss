@@ -1,11 +1,12 @@
 @import "./components/reset";
 @import "./components/main";
+@import "./components/fonts";
 
 $br : 6px;
 
 body {
 	background: #888;
-	font-family: Arial;
+	font-family: monRegular;
 }
 
 aside {
